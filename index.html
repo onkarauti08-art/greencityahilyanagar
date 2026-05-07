@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Join Green City Mission Ahilyanagar — Plant trees, make our city green. 1 lakh trees in 1 year." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Green City Mission Ahilyanagar" />
+    <meta property="og:description" content="Join Green City Mission Ahilyanagar — Plant trees, make our city green. 1 lakh trees in 1 year." />
+    <meta property="theme-color" content="#1a4a2e" />
+    <title>Green City Mission — Ahilyanagar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700;900&family=Tiro+Devanagari+Marathi:wght@400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f0e8;
+        --surface: #ffffff;
+        --surface-soft: #fbf7f0;
+        --text: #1a2f21;
+        --text-muted: #4f6a59;
+        --green: #1a4a2e;
+        --green-soft: #2d7a4f;
+        --accent: #c8a84b;
+        --accent-dark: #a9832e;
+        --border: rgba(26, 74, 46, 0.12);
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "DM Sans", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section {
+        position: relative;
+        padding: 64px 1.25rem;
+      }
+
+      .section + .section {
+        margin-top: -4px;
+      }
+
+      .section-head {
+        max-width: 720px;
+        margin: 0 auto 40px;
+        text-align: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--accent-dark);
+        font-family: "Tiro Devanagari Marathi", serif;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-title {
+        margin: 0;
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.1rem, 4vw, 3.8rem);
+        letter-spacing: -0.04em;
+        line-height: 1.03;
+      }
+
+      .section-copy {
+        margin: 1rem auto 0;
+        max-width: 680px;
+        color: var(--text-muted);
+      }
+
+      .button,
+      .button-secondary,
+      .pill-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        min-height: 48px;
+        padding: 0 1.4rem;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+      }
+
+      .button {
+        background: var(--accent);
+        color: #1a2f21;
+        box-shadow: 0 14px 30px rgba(200, 168, 75, 0.24);
+      }
+
+      .button:hover,
+      .button:focus-visible,
+      .button-secondary:hover,
+      .button-secondary:focus-visible,
+      .pill-button:hover,
+      .pill-button:focus-visible {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+      }
+
+      .button:focus-visible,
+      .button-secondary:focus-visible,
+      .pill-button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid rgba(200, 168, 75, 0.35);
+        outline-offset: 3px;
+      }
+
+      .button-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        color: #ffffff;
+      }
+
+      .hero {
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        background: radial-gradient(circle at top left, rgba(200, 168, 75, 0.18), transparent 28%),
+          linear-gradient(180deg, #163922 0%, #1f4c34 35%, #2d7a4f 100%);
+        color: #f8fbf7;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle at 30% 10%, rgba(255, 255, 255, 0.14) 0, transparent 18%),
+          radial-gradient(circle at 70% 25%, rgba(255, 255, 255, 0.1) 0, transparent 20%);
+        opacity: 0.45;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 1.25rem 6rem;
+      }
+
+      .hero-title {
+        margin: 0;
+        font-family: "Playfair Display", serif;
+        font-weight: 900;
+        font-size: clamp(2.9rem, 7vw, 5.5rem);
+        line-height: 0.95;
+      }
+
+      .hero-subtitle {
+        margin: 1.25rem auto 0;
+        max-width: 720px;
+        font-size: clamp(1.05rem, 2vw, 1.4rem);
+        color: rgba(248, 251, 247, 0.92);
+      }
+
+      .hero-accent {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1.5rem auto 0;
+        font-family: "Tiro Devanagari Marathi", serif;
+        color: #ebf6ee;
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+
+      .launch-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 2rem auto 0;
+        padding: 0.9rem 1.3rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+        color: #f8fbf7;
+        font-weight: 500;
+        font-size: 0.98rem;
+      }
+
+      .hero-actions {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .hero-actions .button-secondary {
+        min-width: 210px;
+      }
+
+      .scroll-hint {
+        position: absolute;
+        left: 50%;
+        bottom: 22px;
+        transform: translateX(-50%);
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        color: #f7f7f3;
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.88;
+      }
+
+      .scroll-hint span {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        border-left: 2px solid #f7f7f3;
+        border-bottom: 2px solid #f7f7f3;
+        transform: rotate(-45deg);
+        animation: arrow-bounce 1.5s infinite ease;
+      }
+
+      .leaf {
+        position: absolute;
+        top: -8%;
+        width: var(--size);
+        height: calc(var(--size) * 0.55);
+        background: rgba(255, 255, 255, 0.72);
+        border-radius: 50% 50% 30% 30%;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+        opacity: var(--opacity);
+        transform: rotate(var(--rotate-start));
+        left: var(--left);
+        animation: leaf-fall var(--duration) linear infinite var(--delay);
+      }
+
+      .leaf::after {
+        content: "";
+        position: absolute;
+        inset: 20% 15% 15% 15%;
+        background: rgba(255, 255, 255, 0.18);
+        border-radius: inherit;
+        transform: rotate(18deg);
+      }
+
+      @keyframes leaf-fall {
+        0% {
+          transform: translateY(0) rotate(var(--rotate-start));
+        }
+        50% {
+          transform: translateY(40vh) rotate(calc(var(--rotate-start) + 45deg));
+        }
+        100% {
+          transform: translateY(110vh) rotate(var(--rotate-end));
+        }
+      }
+
+      @keyframes arrow-bounce {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-45deg);
+        }
+        50% {
+          transform: translateY(8px) rotate(-45deg);
+        }
+      }
+
+      .content-surface {
+        background: var(--surface);
+        border-radius: 32px;
+        box-shadow: var(--shadow);
+        padding: 3rem 1.5rem;
+        margin: 0 auto;
+      }
+
+      .row {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .cols-4 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .stat-card,
+      .tile,
+      .contact-card,
+      .about-box {
+        background: var(--surface);
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        padding: 1.8rem;
+      }
+
+      .stat-card {
+        display: grid;
+        gap: 1rem;
+        border-left: 6px solid var(--green-soft);
+      }
+
+      .stat-card-icon {
+        width: 52px;
+        height: 52px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        background: rgba(200, 168, 75, 0.14);
+        color: var(--accent-dark);
+        font-size: 1.35rem;
+      }
+
+      .stat-card h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .stat-card p {
+        margin: 0;
+        color: var(--text-muted);
+      }
+
+      .tile {
+        display: grid;
+        gap: 1rem;
+        align-items: start;
+        text-align: left;
+      }
+
+      .tile-icon {
+        width: 52px;
+        height: 52px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        background: rgba(26, 74, 46, 0.1);
+        color: var(--green);
+        font-size: 1.4rem;
+      }
+
+      .tile-title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.05rem;
+      }
+
+      .tile-copy {
+        margin: 0;
+        color: var(--text-muted);
+      }
+
+      .counter-panel {
+        max-width: 780px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .counter-number {
+        margin: 1.5rem 0 0.5rem;
+        font-size: clamp(3.4rem, 8vw, 5.5rem);
+        font-family: "Playfair Display", serif;
+        letter-spacing: -0.03em;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.15);
+        overflow: hidden;
+        margin: 2rem 0 1rem;
+      }
+
+      .progress-fill {
+        width: 0;
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(200, 168, 75, 1), rgba(255, 229, 143, 1));
+        transition: width 1.6s ease;
+      }
+
+      .progress-label {
+        margin: 0;
+        color: rgba(248, 251, 247, 0.9);
+      }
+
+      .form-panel {
+        background: var(--surface);
+        border-radius: 32px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .form-row {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .form-field {
+        display: grid;
+        gap: 0.7rem;
+      }
+
+      label {
+        font-weight: 600;
+        color: var(--green);
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 48px;
+        padding: 0.95rem 1rem;
+        border-radius: 18px;
+        border: 1px solid rgba(26, 74, 46, 0.16);
+        background: #ffffff;
+        color: var(--text);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(200, 168, 75, 0.15);
+      }
+
+      .file-zone {
+        border: 2px dashed rgba(26, 74, 46, 0.2);
+        border-radius: 20px;
+        padding: 1.4rem;
+        display: grid;
+        gap: 0.9rem;
+        background: var(--surface-soft);
+      }
+
+      .file-zone p {
+        margin: 0;
+        color: var(--text-muted);
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 0.9rem;
+      }
+
+      .preview-thumb {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(26, 74, 46, 0.14);
+      }
+
+      .preview-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.2rem;
+      }
+
+      .gallery-card {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background: #ffffff;
+      }
+
+      .gallery-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-meta {
+        padding: 1rem;
+      }
+
+      .gallery-meta h4 {
+        margin: 0 0 0.45rem;
+        font-size: 1rem;
+      }
+
+      .gallery-meta p {
+        margin: 0.25rem 0;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(26, 74, 46, 0.62);
+        color: #fff;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        text-align: center;
+        transition: opacity 0.25s ease;
+      }
+
+      .gallery-card:hover .gallery-overlay,
+      .gallery-card:focus-within .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-overlay p {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .about-grid {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .about-copy p {
+        margin: 1rem 0 0;
+        color: var(--text-muted);
+      }
+
+      .about-stats {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .stat-box {
+        display: grid;
+        gap: 0.6rem;
+        padding: 1.4rem;
+        border-radius: 20px;
+        background: rgba(26, 74, 46, 0.08);
+        border: 1px solid rgba(26, 74, 46, 0.12);
+      }
+
+      .stat-icon {
+        font-size: 1.3rem;
+      }
+
+      .stat-label {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .stat-copy {
+        margin: 0;
+        color: var(--text-muted);
+      }
+
+      .contact-card {
+        text-align: center;
+      }
+
+      .contact-card h3 {
+        margin: 0 0 0.9rem;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 0.85rem;
+        margin: 1rem 0 1.5rem;
+      }
+
+      .contact-list p {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 0.98rem;
+      }
+
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .contact-actions a {
+        min-width: 150px;
+      }
+
+      .footer {
+        background: var(--green);
+        color: #f5f0e8;
+        text-align: center;
+        padding: 2rem 1.25rem;
+      }
+
+      .footer p {
+        margin: 0.6rem 0;
+        color: #f2f2e8;
+      }
+
+      .footer-links {
+        display: inline-flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      .footer-links a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .success-overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(26, 74, 46, 0.9);
+        padding: 1.5rem;
+        z-index: 100;
+      }
+
+      .success-overlay.active {
+        display: flex;
+      }
+
+      .success-card {
+        width: min(520px, 100%);
+        background: #ffffff;
+        border-radius: 32px;
+        padding: 2.5rem;
+        text-align: center;
+        box-shadow: var(--shadow);
+      }
+
+      .checkmark {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 1.5rem;
+      }
+
+      .checkmark-circle {
+        fill: none;
+        stroke: var(--green);
+        stroke-width: 8;
+        stroke-dasharray: 310;
+        stroke-dashoffset: 310;
+        animation: draw-circle 0.9s ease forwards;
+      }
+
+      .checkmark-tick {
+        fill: none;
+        stroke: var(--green);
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: draw-tick 0.9s ease 0.4s forwards;
+      }
+
+      @keyframes draw-circle {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes draw-tick {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .success-card h3 {
+        margin: 0;
+        font-size: 1.75rem;
+      }
+
+      .success-card p {
+        margin: 1rem 0 0;
+        color: var(--text-muted);
+      }
+
+      .placeholder-card {
+        padding: 2.8rem 1.5rem;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--text-muted);
+        text-align: center;
+        border: 1px dashed rgba(26, 74, 46, 0.2);
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (min-width: 640px) {
+        .section {
+          padding: 72px 2rem;
+        }
+
+        .section-head {
+          margin-bottom: 48px;
+        }
+
+        .row.cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .row.cols-4 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .form-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .form-panel {
+          padding: 3rem;
+        }
+
+        .about-grid {
+          grid-template-columns: 1.5fr 1fr;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section {
+          padding: 96px 2.5rem;
+        }
+
+        .row.cols-4 {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .hero-inner {
+          padding-top: 5rem;
+          padding-bottom: 5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section id="hero" class="hero">
+        <div class="hero-inner fade-up">
+          <div class="eyebrow">ग्रीन सिटी मोहीम</div>
+          <h1 class="hero-title">Plant a Tree. Heal a City.</h1>
+          <p class="hero-subtitle">Join Ahilyanagar's Green City Mission — 1 Lakh Trees in 1 Year</p>
+          <div class="hero-accent">अहिल्यानगर महानगरपालिका</div>
+          <div class="launch-badge" aria-label="Launch date">🌱 Launched: 1st May 2026</div>
+          <div class="hero-actions">
+            <a class="button" href="#pledge" aria-label="Plant a Tree">Plant a Tree →</a>
+            <a class="button-secondary" href="#counter" aria-label="See our progress">See Our Progress ↓</a>
+          </div>
+        </div>
+        <div class="scroll-hint" aria-hidden="true">
+          <span></span>
+          <div>Scroll</div>
+        </div>
+      </section>
+
+      <section id="crisis" class="section">
+        <div class="section-head fade-up">
+          <h2 class="section-title">Our City Is Warming. It's Time to Act.</h2>
+        </div>
+        <div class="row cols-3 fade-up">
+          <article class="stat-card">
+            <div class="stat-card-icon" aria-hidden="true">🌡️</div>
+            <h3>Rising Temperatures</h3>
+            <p>Ahilyanagar records temperatures exceeding 42°C in summer. Urban heat islands form where green cover disappears. Each tree can cool its surroundings by up to 2–8°C.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-icon" aria-hidden="true">🌫️</div>
+            <h3>Shrinking Green Cover</h3>
+            <p>Rapid urbanization has reduced Ahilyanagar's green area significantly over the last two decades. We need active reforestation to restore ecological balance.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-icon" aria-hidden="true">💧</div>
+            <h3>Groundwater Depletion</h3>
+            <p>Trees act as natural water reservoirs. Their root systems recharge groundwater and prevent soil erosion, directly benefiting agriculture and daily water supply.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="help" class="section" style="background: var(--surface-soft);">
+        <div class="section-head fade-up">
+          <div class="eyebrow">Make Every Occasion Greener</div>
+          <h2 class="section-title">Plant a tree on your birthday, anniversary, festival, or any special day.</h2>
+          <p class="section-copy">Whether you plant one tree or one hundred — every sapling matters. In the spirit of Punyashlok Ahilyadevi Holkar, who dedicated her life to public welfare, let us carry forward that legacy by nurturing the environment for generations to come.</p>
+        </div>
+        <div class="row cols-4 fade-up">
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">🎂</div>
+            <p class="tile-title">Birthdays</p>
+            <p class="tile-copy">Mark your special day by planting a tree that grows with you.</p>
+          </article>
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">💍</div>
+            <p class="tile-title">Anniversaries</p>
+            <p class="tile-copy">Celebrate love and life with a green gift for the city.</p>
+          </article>
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">🎉</div>
+            <p class="tile-title">Festivals & Celebrations</p>
+            <p class="tile-copy">Add meaning to festivals by giving back through plantation.</p>
+          </article>
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">🏢</div>
+            <p class="tile-title">Corporate CSR Days</p>
+            <p class="tile-copy">Empower teams to make a measurable environmental impact.</p>
+          </article>
+        </div>
+        <div class="hero-actions fade-up" style="justify-content: center; margin-top: 2.5rem;">
+          <a class="button" href="#pledge" aria-label="I want to plant">I Want to Plant →</a>
+        </div>
+      </section>
+
+      <section id="counter" class="section" style="background: linear-gradient(180deg, #1d4f2f 0%, #163922 100%); color: #f7f8f4;">
+        <div class="counter-panel fade-up">
+          <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Trees Planted So Far</div>
+          <h2 class="section-title" style="color: #fff;">Growing every day, one sapling at a time.</h2>
+          <div class="counter-number" id="treeCount">0</div>
+          <p class="section-copy" style="color: rgba(255,255,255,0.85);">and growing every day... 🌱</p>
+          <div class="progress-bar" aria-label="Progress towards 100,000 tree goal">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <p class="progress-label" id="progressLabel">Goal: 1,00,000 Trees by May 2026</p>
+        </div>
+      </section>
+
+      <section id="pledge" class="section">
+        <div class="section-head fade-up">
+          <div class="eyebrow">I Pledge to Plant</div>
+          <h2 class="section-title">Submit your tree plantation details and inspire others.</h2>
+        </div>
+        <div class="form-panel fade-up">
+          <form id="pledgeForm" class="form-grid" novalidate>
+            <div class="form-field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" required aria-required="true" placeholder="Your full name" />
+            </div>
+            <div class="form-field">
+              <label for="mobileNumber">Mobile Number</label>
+              <input id="mobileNumber" name="mobileNumber" type="tel" inputmode="numeric" pattern="[0-9]{10}" required aria-required="true" placeholder="9822304881" />
+            </div>
+            <div class="form-field">
+              <label for="emailAddress">Email Address</label>
+              <input id="emailAddress" name="emailAddress" type="email" required aria-required="true" placeholder="name@example.com" />
+            </div>
+            <div class="form-field">
+              <label for="cityArea">City / Area</label>
+              <input id="cityArea" name="cityArea" type="text" required aria-required="true" placeholder="Your locality in Ahilyanagar" />
+            </div>
+            <div class="form-field">
+              <label for="treesPlanted">Number of Trees Planted</label>
+              <input id="treesPlanted" name="treesPlanted" type="number" min="1" max="10000" required aria-required="true" placeholder="1" />
+            </div>
+            <div class="form-field">
+              <label for="occasion">Occasion</label>
+              <select id="occasion" name="occasion" required aria-required="true">
+                <option value="">Select an occasion</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Festival</option>
+                <option>Corporate CSR</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field" style="grid-column: 1 / -1;">
+              <label for="photoUpload">Upload Photo(s) of Trees Planted</label>
+              <div class="file-zone">
+                <p>Select up to 5 images. Photos will preview before submit.</p>
+                <input id="photoUpload" name="photoUpload" type="file" accept="image/*" multiple aria-label="Upload photos of trees planted" />
+                <div id="previewGrid" class="preview-grid" aria-live="polite"></div>
+              </div>
+            </div>
+            <div class="form-field" style="grid-column: 1 / -1;">
+              <label for="messageNote">Message / Note <span style="font-weight:400; color: var(--text-muted);">(optional)</span></label>
+              <textarea id="messageNote" name="messageNote" rows="3" placeholder="Share your motivation or a short message"></textarea>
+            </div>
+            <button type="submit" class="button" aria-label="Submit my contribution">Submit My Contribution 🌳</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="gallery" class="section" style="background: var(--surface-soft);">
+        <div class="section-head fade-up">
+          <div class="eyebrow">Our Green Community</div>
+          <h2 class="section-title">Every photo tells a story of hope.</h2>
+        </div>
+        <div id="galleryGrid" class="gallery-grid fade-up" aria-live="polite"></div>
+      </section>
+
+      <section id="aboutMission" class="section">
+        <div class="about-grid fade-up">
+          <div class="about-copy">
+            <div class="eyebrow">About Green City Mission</div>
+            <h2 class="section-title">About Green City Mission</h2>
+            <p>The Green City Mission (ग्रीन सिटी मोहीम) was launched on May 1, 2026, under the visionary leadership of Deputy Mayor Adv. Dhananjay Krishnabhau Jadhav, in partnership with Ahilyanagar Mahanagar Palika and Sai Dwarka Seva Trust.</p>
+            <p>The mission aims to plant 1 lakh (100,000) trees across Ahilyanagar within one year — making it cleaner, greener, and more liveable for every citizen.</p>
+            <p>Organizations, schools, corporates, and individuals are invited to contribute through tree plantation, tree guards, saplings, or maintenance support under their CSR or personal initiative.</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-box fade-up">
+              <p class="stat-icon" aria-hidden="true">🌳</p>
+              <p class="stat-label">Goal: 1,00,000 Trees</p>
+              <p class="stat-copy">Aiming to restore green cover across Ahilyanagar.</p>
+            </div>
+            <div class="stat-box fade-up">
+              <p class="stat-icon" aria-hidden="true">📅</p>
+              <p class="stat-label">Duration: 1 Year (May 2026 – May 2027)</p>
+              <p class="stat-copy">A year-long campaign for sustainable growth.</p>
+            </div>
+            <div class="stat-box fade-up">
+              <p class="stat-icon" aria-hidden="true">🏙️</p>
+              <p class="stat-label">City: Ahilyanagar, Maharashtra</p>
+              <p class="stat-copy">A local mission rooted in civic pride and care.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" style="background: var(--surface-soft);">
+        <div class="section-head fade-up">
+          <div class="eyebrow">Get Involved — Contact Us</div>
+          <h2 class="section-title">Get Involved — Contact Us</h2>
+        </div>
+        <div class="contact-card fade-up">
+          <h3>For more information and to collaborate:</h3>
+          <div class="contact-list">
+            <p><strong>इंजि. व विधीज्ञ कैलाश दिघे</strong></p>
+            <p>📞 9822304881</p>
+            <p>📱 9420028774</p>
+            <p>📧 mbpsnagar@gmail.com</p>
+          </div>
+          <div class="contact-actions">
+            <a class="pill-button button" href="tel:9822304881" aria-label="Call now">Call Now</a>
+            <a class="pill-button button-secondary" href="mailto:mbpsnagar@gmail.com" aria-label="Email us">Email Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>ग्रीन सिटी मोहीम — अहिल्यानगर | © 2026 Ahilyanagar Mahanagar Palika & Sai Dwarka Seva Trust</p>
+      <p>Inspired by the legacy of Punyashlok Ahilyadevi Holkar 🌿</p>
+      <div class="footer-links">
+        <a id="whatsappShare" href="#" target="_blank" rel="noreferrer noopener" aria-label="Share on WhatsApp">Share on WhatsApp</a>
+      </div>
+    </footer>
+
+    <div id="successOverlay" class="success-overlay" role="dialog" aria-live="assertive" aria-modal="true">
+      <div class="success-card">
+        <svg class="checkmark" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="checkmark-circle" cx="60" cy="60" r="52" />
+          <path class="checkmark-tick" d="M36 62l18 18 34-46" />
+        </svg>
+        <h3 id="successTitle">Thank you!</h3>
+        <p id="successMessage">You've planted trees for Ahilyanagar. Together we grow. 🌿</p>
+      </div>
+    </div>
+
+    <script>
+      const storageKey = "greenCityMissionSubmissions";
+      const goalCount = 100000;
+      const hero = document.getElementById('hero');
+      const treeCountEl = document.getElementById('treeCount');
+      const progressFill = document.getElementById('progressFill');
+      const progressLabel = document.getElementById('progressLabel');
+      const galleryGrid = document.getElementById('galleryGrid');
+      const photoUpload = document.getElementById('photoUpload');
+      const previewGrid = document.getElementById('previewGrid');
+      const form = document.getElementById('pledgeForm');
+      const successOverlay = document.getElementById('successOverlay');
+      const successTitle = document.getElementById('successTitle');
+      const successMessage = document.getElementById('successMessage');
+      const whatsappShare = document.getElementById('whatsappShare');
+
+      let previewImages = [];
+      let counterAnimated = false;
+
+      function getSubmissions() {
+        try {
+          const raw = localStorage.getItem(storageKey);
+          return raw ? JSON.parse(raw) : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function saveSubmissions(items) {
+        localStorage.setItem(storageKey, JSON.stringify(items));
+      }
+
+      function formatNumber(value) {
+        return Number(value).toLocaleString('en-IN');
+      }
+
+      function getTotalTrees() {
+        return getSubmissions().reduce((sum, entry) => sum + Number(entry.trees), 0);
+      }
+
+      function renderCounter(animate = true) {
+        const total = getTotalTrees();
+        const percent = Math.min(100, (total / goalCount) * 100);
+        if (animate) {
+          animateCount(0, total, 1800, (value) => {
+            treeCountEl.textContent = formatNumber(value);
+          });
+        } else {
+          treeCountEl.textContent = formatNumber(total);
+        }
+        progressFill.style.width = `${percent}%`;
+        progressLabel.textContent = `Goal: 1,00,000 Trees by May 2026`;
+      }
+
+      function animateCount(start, end, duration, callback) {
+        const startTime = performance.now();
+        function step(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(start + (end - start) * eased);
+          callback(value);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      function relativeTime(timestamp) {
+        const seconds = Math.floor((Date.now() - timestamp) / 1000);
+        if (seconds < 60) return 'moments ago';
+        const minutes = Math.floor(seconds / 60);
+        if (minutes < 60) return `${minutes} minute${minutes === 1 ? '' : 's'} ago`;
+        const hours = Math.floor(minutes / 60);
+        if (hours < 24) return `${hours} hour${hours === 1 ? '' : 's'} ago`;
+        const days = Math.floor(hours / 24);
+        return `${days} day${days === 1 ? '' : 's'} ago`;
+      }
+
+      function renderGallery() {
+        const submissions = getSubmissions().slice().sort((a, b) => b.timestamp - a.timestamp);
+        if (!submissions.length) {
+          galleryGrid.innerHTML = '<div class="placeholder-card fade-up">Be the first to plant and share! Your photo will appear here. 🌱</div>';
+          return;
+        }
+        galleryGrid.innerHTML = submissions
+          .map((entry) => {
+            const imageUrl = entry.photos[0] || '';
+            return `
+              <article class="gallery-card fade-up">
+                <img src="${imageUrl}" alt="Photo of planted trees by ${entry.name}" />
+                <div class="gallery-overlay"><p>${entry.name} — ${entry.trees} tree${entry.trees === 1 ? '' : 's'}</p></div>
+                <div class="gallery-meta">
+                  <h4>${entry.name}</h4>
+                  <p>${entry.trees} tree${entry.trees === 1 ? '' : 's'} · ${entry.occasion}</p>
+                  <p>${relativeTime(entry.timestamp)}</p>
+                </div>
+              </article>
+            `;
+          })
+          .join('');
+      }
+
+      function setWhatsAppLink() {
+        const pageUrl = encodeURIComponent(window.location.href);
+        const message = encodeURIComponent('I joined the Green City Mission! Plant a tree for Ahilyanagar 🌳 ');
+        whatsappShare.href = `https://wa.me/?text=${message}${pageUrl}`;
+      }
+
+      function createPreview(files) {
+        previewImages = [];
+        previewGrid.innerHTML = '';
+        const limitedFiles = Array.from(files).slice(0, 5);
+        if (!limitedFiles.length) {
+          previewGrid.innerHTML = '<p style="color: var(--text-muted);">No photos selected yet.</p>';
+          return;
+        }
+
+        limitedFiles.forEach((file) => {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            const dataUrl = event.target.result;
+            previewImages.push(dataUrl);
+            const thumb = document.createElement('div');
+            thumb.className = 'preview-thumb';
+            thumb.innerHTML = `<img src="${dataUrl}" alt="Preview of selected tree photo" />`;
+            previewGrid.appendChild(thumb);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function validateForm(values) {
+        if (!values.name.trim()) {
+          alert('Please enter your full name.');
+          return false;
+        }
+        if (!/^[0-9]{10}$/.test(values.mobile)) {
+          alert('Please enter a valid 10-digit mobile number.');
+          return false;
+        }
+        if (!values.email.trim()) {
+          alert('Please enter your email address.');
+          return false;
+        }
+        if (!values.city.trim()) {
+          alert('Please enter your city or area.');
+          return false;
+        }
+        if (!(values.trees >= 1 && values.trees <= 10000)) {
+          alert('Please enter a tree count between 1 and 10000.');
+          return false;
+        }
+        if (!values.occasion) {
+          alert('Please select an occasion.');
+          return false;
+        }
+        if (!previewImages.length) {
+          alert('Please upload at least one photo of the trees planted.');
+          return false;
+        }
+        return true;
+      }
+
+      function showSuccess(name, count) {
+        successTitle.textContent = `Thank you, ${name}!`;
+        successMessage.textContent = `You've planted ${count} tree${count === 1 ? '' : 's'} for Ahilyanagar. Together we grow. 🌿`;
+        successOverlay.classList.add('active');
+        setTimeout(() => successOverlay.classList.remove('active'), 4000);
+      }
+
+      function resetForm() {
+        form.reset();
+        previewImages = [];
+        previewGrid.innerHTML = '<p style="color: var(--text-muted);">No photos selected yet.</p>';
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const submission = {
+          name: formData.get('fullName').trim(),
+          mobile: formData.get('mobileNumber').trim(),
+          email: formData.get('emailAddress').trim(),
+          city: formData.get('cityArea').trim(),
+          trees: Number(formData.get('treesPlanted')),
+          occasion: formData.get('occasion'),
+          message: formData.get('messageNote').trim(),
+          photos: [...previewImages],
+          timestamp: Date.now(),
+        };
+
+        if (!validateForm(submission)) {
+          return;
+        }
+
+        const submissions = getSubmissions();
+        submissions.push(submission);
+        saveSubmissions(submissions);
+        renderGallery();
+        renderCounter(true);
+        showSuccess(submission.name, submission.trees);
+        resetForm();
+      }
+
+      function injectLeaves() {
+        for (let i = 0; i < 10; i += 1) {
+          const leaf = document.createElement('div');
+          leaf.className = 'leaf';
+          leaf.style.setProperty('--size', `${20 + Math.random() * 32}px`);
+          leaf.style.setProperty('--left', `${Math.random() * 95}%`);
+          leaf.style.setProperty('--opacity', `${0.55 + Math.random() * 0.35}`);
+          leaf.style.setProperty('--duration', `${8 + Math.random() * 7}s`);
+          leaf.style.setProperty('--delay', `${Math.random() * 10}s`);
+          leaf.style.setProperty('--rotate-start', `${-15 + Math.random() * 30}deg`);
+          leaf.style.setProperty('--rotate-end', `${20 + Math.random() * 60}deg`);
+          hero.appendChild(leaf);
+        }
+      }
+
+      function observeSections() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                if (entry.target.id === 'counter' && !counterAnimated) {
+                  counterAnimated = true;
+                  renderCounter(true);
+                }
+              }
+            });
+          },
+          {
+            threshold: 0.18,
+          }
+        );
+
+        document.querySelectorAll('.fade-up').forEach((element) => observer.observe(element));
+      }
+
+      function initialize() {
+        injectLeaves();
+        setWhatsAppLink();
+        renderGallery();
+        renderCounter(false);
+        observeSections();
+        photoUpload.addEventListener('change', (event) => createPreview(event.target.files));
+        form.addEventListener('submit', handleSubmit);
+        successOverlay.addEventListener('click', () => successOverlay.classList.remove('active'));
+        if (!previewGrid.innerHTML.trim()) {
+          previewGrid.innerHTML = '<p style="color: var(--text-muted);">No photos selected yet.</p>';
+        }
+      }
+
+      initialize();
+    </script>
+  </body>
+</html>
